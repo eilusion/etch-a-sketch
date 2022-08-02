@@ -1,4 +1,6 @@
 const grid = document.querySelector('#grid');
+const slider = document.querySelector('.slider');
+const sliderOutput = document.querySelector('.sliderOutput');
 
 function fillGrid(cols, rows) {
     for (c = 0; c < (cols * rows); c++){
@@ -16,3 +18,10 @@ for (let i = 0; i < cells.length; i++) {
         cells[i].classList.add('activeCell');
     })
 }
+
+sliderOutput.textContent = slider.value
+
+slider.addEventListener('input', function () {
+    sliderOutput.textContent = slider.value
+    fillGrid(slider.value, slider.value)
+});
