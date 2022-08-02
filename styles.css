@@ -1,0 +1,46 @@
+#container {
+    height: 700px;
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkcyan;
+    border: 1px solid black;
+    margin-top: -50px;
+    margin-bottom: 50px;
+}
+
+.gameBox {
+    display: flex;
+    align-items: center;
+}
+
+.controls {
+    height: 300px;
+    width: 200px;
+    border: 1px solid black;
+    margin: 20px;
+}
+
+#grid {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    gap: 2px;
+}
+
+.cell {
+    height: 25px;
+    background-color: blue;
+}
+
+
