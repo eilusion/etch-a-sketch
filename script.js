@@ -7,6 +7,12 @@ function fillGrid(cols, rows) {
         grid.appendChild(cell);
     }
 }
-
 fillGrid(16, 16);
 
+const cells = document.querySelectorAll("#grid div");
+
+for (let i = 0; i < cells.length; i++) {
+    cells[i].addEventListener('mouseover', function () {
+        cells[i].classList.add('activeCell');
+    })
+}

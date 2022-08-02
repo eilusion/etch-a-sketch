@@ -1,7 +1,7 @@
 #container {
     height: 700px;
     width: 100%;
-    background-color: beige;
+    background-color: rgb(36, 81, 95);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,8 +11,9 @@
 h1 {
     padding: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: darkcyan;
-    border: 1px solid black;
+    color: rgb(160, 221, 222);
+    border: 2px solid rgb(72, 206, 162);
+    border-radius: 5px;
     margin-top: -50px;
     margin-bottom: 50px;
 }
@@ -25,7 +26,8 @@ h1 {
 .controls {
     height: 300px;
     width: 200px;
-    border: 1px solid black;
+    border: 2px solid rgb(72, 206, 162);
+    border-radius: 5px;
     margin: 20px;
 }
 
@@ -40,7 +42,11 @@ h1 {
 
 .cell {
     height: 25px;
-    background-color: blue;
+    background-color: rgb(214, 247, 235);
+}
+
+.activeCell {
+    background-color: rgb(72, 206, 162);
 }
 
 
