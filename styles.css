@@ -11,8 +11,8 @@
 h1 {
     padding: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(160, 221, 222);
-    border: 2px solid rgb(72, 206, 162);
+    color: rgb(94, 208, 166);
+    border: 3px solid rgb(72, 206, 162);
     border-radius: 5px;
     margin-top: -50px;
     margin-bottom: 50px;
@@ -29,6 +29,26 @@ h1 {
     border: 2px solid rgb(72, 206, 162);
     border-radius: 5px;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(183, 235, 217)
+}
+
+.controlHeader {
+    height: 20px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid rgb(183, 235, 217);
+}
+
+.sliderHeader {
+    margin: 5px;
+}
+
+.slider {
+    height: 10px;
 }
 
 #grid {
@@ -48,5 +68,4 @@ h1 {
 .activeCell {
     background-color: rgb(72, 206, 162);
 }
-
 
