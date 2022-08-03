@@ -1,6 +1,7 @@
 const grid = document.querySelector('#grid');
 const slider = document.querySelector('.slider');
 const sliderOutput = document.querySelector('.sliderOutput');
+const resetBtn = document.querySelector('.resetButton')
 
 function fillGrid(cols, rows) {
     for (c = 0; c < (cols * rows); c++){
@@ -9,8 +10,6 @@ function fillGrid(cols, rows) {
         grid.appendChild(cell);
     }
 }
-
-fillGrid(slider.value, slider.value);
 
 function drawEffect() {
     const cells = document.querySelectorAll("#grid div");
@@ -25,6 +24,9 @@ function removeDivs(grid) {
     while (grid.firstChild) grid.removeChild(grid.firstChild);
 }
 
+fillGrid(slider.value, slider.value);
+drawEffect()
+
 sliderOutput.textContent = slider.value
 
 slider.addEventListener('input', function () {
@@ -35,4 +37,15 @@ slider.addEventListener('input', function () {
     fillGrid(slider.value, slider.value)
     drawEffect()
 });
+
+resetBtn.addEventListener('click', function () {
+    slider.value = 16;
+    sliderOutput.textContent = slider.value
+    grid.style.gridTemplateColumns = `repeat(${slider.value}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${slider.value}, 1fr)`
+    removeDivs(grid)
+    fillGrid(slider.value, slider.value)
+    drawEffect()
+})
+
 
