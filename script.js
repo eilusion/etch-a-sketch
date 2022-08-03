@@ -9,19 +9,30 @@ function fillGrid(cols, rows) {
         grid.appendChild(cell);
     }
 }
-fillGrid(16, 16);
 
-const cells = document.querySelectorAll("#grid div");
+fillGrid(slider.value, slider.value);
 
-for (let i = 0; i < cells.length; i++) {
-    cells[i].addEventListener('mouseover', function () {
-        cells[i].classList.add('activeCell');
-    })
+function drawEffect() {
+    const cells = document.querySelectorAll("#grid div");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].addEventListener('mouseover', function () {
+            cells[i].classList.add('activeCell');
+        })
+    }
+}
+
+function removeDivs(grid) {
+    while (grid.firstChild) grid.removeChild(grid.firstChild);
 }
 
 sliderOutput.textContent = slider.value
 
 slider.addEventListener('input', function () {
     sliderOutput.textContent = slider.value
+    grid.style.gridTemplateColumns = `repeat(${slider.value}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${slider.value}, 1fr)`
+    removeDivs(grid)
     fillGrid(slider.value, slider.value)
+    drawEffect()
 });
+
