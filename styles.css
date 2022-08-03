@@ -73,3 +73,13 @@ h1 {
     background-color: rgb(72, 206, 162);
 }
 
+.resetButton {
+    all: unset;
+    cursor: pointer;
+    background-color: rgb(72, 206, 162);
+    color:rgb(56, 114, 92);
+    padding: 7px;
+    border-radius: 5px;
+    margin: 13px;
+    border: 2px solid rgb(183, 235, 217);
+}
